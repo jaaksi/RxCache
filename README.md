@@ -57,7 +57,13 @@ RxCache.apply {
 }
 ```
 
-读取数据
+同步读取数据
+```
+RxCache.get("url", String::class.java)
+RxCache.get("data", BannerBean::class.java)
+```
+
+异步读取数据
 
 ```
 lifecycleScope.launch {
